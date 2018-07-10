@@ -5,6 +5,6 @@ console.log(userLastName);
 
 alert(userLastName);
 
-let userBirthday = new Date(prompt("What is your birthday?", "I don't have one."));
-const isBirthday = confirm("Is this your birthday?");
+let userBirthday = new Date(prompt("What is your birthday?", "MM/DD/YYYY"));
+const isBirthday = confirm(`Is ${userBirthday} your birthday?`);
 alert(userBirthday);
