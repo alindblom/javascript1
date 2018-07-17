@@ -8,7 +8,20 @@
 	<title>How to JS - Day 1</title>
 </head>
 <body>
-
+	<form name="selectForm">
+	  <p>
+	    <label for="musicTypes">Choose some music types, then click the button below:</label>
+	    <select id="musicTypes" name="musicTypes" multiple="multiple">
+	      <option selected="selected">R&B</option>
+	      <option>Jazz</option>
+	      <option>Blues</option>
+	      <option>New Age</option>
+	      <option>Classical</option>
+	      <option>Opera</option>
+	    </select>
+	  </p>
+	  <p><input id="btn" type="button" value="How many are selected?" /></p>
+	</form>
 	<script src="js/scripts.js" charset="utf-8"></script>
 </body>
 </html>
