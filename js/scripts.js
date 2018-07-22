@@ -68,7 +68,7 @@ console.log(paragraph);
 		** any time you have an anonymous function, write it in fat arrow function
 - need to pass in an argument to gain access to the event in js
 	ie: why we named it ev instead of () below so we can view in console console log
-	
+
 */
 
 div.addEventListener(
@@ -79,5 +79,12 @@ div.addEventListener(
 	ev => { //ES6 way to write callback
 		console.log(ev);
 		div.style.backgroundColor = "#e40007";
+	}
+);
+div.addEventListener(
+	"mouseleave",
+	ev => {
+		console.log(ev);
+		div.style.backgroundColor = "#388422";
 	}
 );
