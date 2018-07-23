@@ -71,20 +71,44 @@ console.log(paragraph);
 
 */
 
-div.addEventListener(
-	"mouseover",
-	// function(ev) {
-	// 	div.style.backgroundColor = "#e40007";
-	// } --> ES5 way to write callback
-	ev => { //ES6 way to write callback
-		console.log(ev);
-		div.style.backgroundColor = "#e40007";
-	}
-);
-div.addEventListener(
-	"mouseleave",
+// div.addEventListener(
+// 	"mouseover",
+// 	// function(ev) {
+// 	// 	div.style.backgroundColor = "#e40007";
+// 	// } --> ES5 way to write callback
+// 	ev => { //ES6 way to write callback
+// 		console.log(ev);
+// 		div.style.backgroundColor = "#e40007";
+// 	}
+// );
+// div.addEventListener(
+// 	"mouseleave",
+// 	ev => {
+// 		console.log(ev);
+// 		div.style.backgroundColor = "#388422";
+// 	}
+// );
+
+button_1.addEventListener(
+	"click",
 	ev => {
 		console.log(ev);
-		div.style.backgroundColor = "#388422";
+		alert(`Hey, you clicked on me!`);
+	}
+);
+
+div_1.addEventListener(
+	"mouseover",
+	ev => {
+		console.log(ev);
+		div_1.style.backgroundColor = "#777777";
+	}
+);
+
+h1_1.addEventListener(
+	"keyup",
+	ev => {
+		console.log(ev);
+		h1_1.style.fontcolor = "#9837ab";
 	}
 );
