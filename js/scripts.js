@@ -109,6 +109,6 @@ h1_1.addEventListener(
 	"keyup",
 	ev => {
 		console.log(ev);
-		h1_1.style.fontcolor = "#9837ab";
+		h1_1.style.color = "#9837ab";
 	}
 );
