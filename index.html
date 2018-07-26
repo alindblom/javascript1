@@ -5,10 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/styles.css">
-	<title>How to JS - Day 1</title>
+	<title>How to JS - Day 8</title>
 </head>
 <body>
-
+	<form action="" name="login" method="POST">
+	<!-- action: where you want your data submitted to
+			method: default is GET, sent through action attribute url, not secure.
+							POST -> packages query parameters in a secure object and sends
+										them to the action attribute url -->
+		<input type="email" name="email" required minlength="5">
+		<input type="password" name="password" required maxlength="6">
+		<button type="submit">Login!!</button>
+	</form>
 	<script src="js/scripts.js" charset="utf-8"></script>
 </body>
 </html>
