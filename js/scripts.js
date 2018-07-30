@@ -1,20 +1,20 @@
-// FORMS
+let button = document.querySelector("button");
+let body = document.querySelector("body");
 
-/*
- - two ways to access forms:
- 	- document.forms[]
-		*
-	- document.forms.(name attribute on form element in html)
-		* look below for example
+button.addEventListener(
+	"click", (e) => {
+		let titlePrompt = prompt("Enter a title for the page!");
+		let pageTitle = document.createElement("h1");
+		pageTitle.textContent = titlePrompt;
+		body.insertBefore(pageTitle, button);
+		pageTitle.classList.add("text-center");
 
- - if you put only one button in your form, html assumes that button is the submut button
- - submit button types:
- 	* <input type="submit">
-	* <button type="submit"></button>
+		let usersDay = prompt("What did you do today?");
+		let pTag = document.createElement("p");
+		pTag.textContent = usersDay;
+		body.insertBefore(pTag, button);
+		pTag.classList.add("text-justify");
 
-		** if you don't fill out the "action" attribute in a form element with a url,
-		the form will send the data to the current url as a query parameter -> url/?stuff
-*/
-
-let loginForm = document.forms.login;
-let emailImput = loginForm.email;
+		let userColor = prompt("What is your favorite color?");
+		
+	});
