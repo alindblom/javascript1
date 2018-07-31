@@ -1,6 +1,8 @@
 let button = document.querySelector("button");
 let body = document.querySelector("body");
 
+let colorsArray = ["purple", "blue", "green", "yellow", "orange", "red"];
+
 button.addEventListener(
 	"click", (e) => {
 		let titlePrompt = prompt("Enter a title for the page!");
@@ -15,6 +17,16 @@ button.addEventListener(
 		body.insertBefore(pTag, button);
 		pTag.classList.add("text-justify");
 
-		let userColor = prompt("What is your favorite color?");
-		
+		let userColor = prompt("What is your favorite color?", "purple, blue, green, yellow, orange, or red");
+		for(i = 0; i < colorsArray.length; i++){
+			if(colorsArray[i] == userColor){
+				pTag.style.backgroundColor = "i"
+			} else {
+				alert("That's not a color!")
+			}
+		}
+
+
 	});
+
+//SOLUTION
