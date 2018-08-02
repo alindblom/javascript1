@@ -46,14 +46,23 @@ function User(name, email, password, favorites, cart) {
 	this.cart = cart;
 }; //4th way to bind 'this'
 
-	// let cody = new User("Cody", "code-man-5000@gmail.com", "123456", [], []);
-	// // always have to call new to build new object with these objects
-	// // console.log(cody);
-	// // console.log(Object.getPrototypeOf(cody));
-	// let andi = new User("Andi", "a@gmail.com", "12323", [], []);
-	// andi.isAdmin = true;
-	// // console.log(andi);
-	// use dot notation to add new property = new value
+	let cody = new User("Cody", "code-man-5000@gmail.com", "123456", [], []);
+	// always have to call new to build new object with these objects
+	// console.log(cody);
+	// console.log(Object.getPrototypeOf(cody));
+	let andi = new User("Andi", "a@gmail.com", "12323", [], []);
+	andi.isAdmin = true;
+	console.log(andi);
+
+	//creating own method for own object
+	User.prototype.calculateCartTotal = function() {
+		let total = 0;
+		this.card.forEach(item => {
+			total += item.price;
+		});
+		return total;
+	}
+	//use dot notation to add new property = new value
 
 //BRACKET NOTATION: different way to refer to properties on an object
 	// andi["42"] = false //bracket notation
@@ -71,3 +80,5 @@ userForm.addEventListener("submit", e => {
 	console.log(newUser);
 	userForm.reset();
 });
+
+//
